@@ -6,7 +6,7 @@
 font-family: 'Cinzel', serif;*/
 
 /*background image and general styling information*/
-body {
+html {
     background-image: url("QuizImages/backgroundImage.jpg");
     background-repeat: no-repeat;
     background-size: cover;
