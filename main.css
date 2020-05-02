@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+/*font-family: 'Cormorant Garamond', serif;
+font-family: 'Cinzel', serif;*/
+
+/*background image and general styling information*/
+body {
+    background-image: url("QuizImages/backgroundImage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* gives font information for the title header*/
+h1 {
+    font-family: 'Cinzel', serif;
+}
+
+/*centers page content*/
+div {
+    margin: auto;
+    text-align: center;
+    border: none;
+}
+
+/*general styling info for the main container*/
+.main-container {
+    background-color: #e6e5e1;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #919077;
+    width: 80%;
+    /*height: 625px;*/
+    padding: 50px 15px 50px 15px;
+    margin: auto;
+}
+
+/*styles quiz description*/
+.quizDescription {
+    background-color: #e6e5e1;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #919077;
+    padding: 15px;
+    margin: 40px;
+}
+
+/*removes borders from all containers except the main container*/
+form, fieldset, .title-container, .question-score-container, .quiz-container, .results-container {
+    border: none;
+}
+
+/*makes all containers whitesmoke except main container and question/score counter container */
+form, .title-container, .quiz-container, .results-container {
+    background-color: whitesmoke;
+    padding: 15px;
+}
+
+/*styles the final score display*/
+.finalScore {
+    display: inline-block;
+    padding: 15px;
+    margin: 0px 15px 15px 15px;
+    border-radius: 10px;
+    color: black;
+    background-color: #ededb2;
+}
+
+/*general styling for the final results screen*/
+.finalResults-container {
+    background-color: black;
+    color: white;
+}
+
+/*gives breathing room to the question and score counters*/
+.question-score-container {
+    padding-bottom: 10px;
+}
+
+/* gives some breathing room to the current question and the possible answers*/
+.question, .options, h2 {
+    padding-top: 20px;
+}
+
+/*general border styling for all images*/
+img {
+    border-style: solid;
+    border-width: 4px;
+    border-color: #919077;
+}
+
+/*necessary height limit on the image displayed for a correct answer*/
+.css-rightAnswer {
+    max-height: 325px;
+}
+
+/*styles 'start quiz', 'submit answer', 'next question', and 'reset quiz' buttons*/
+button {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: medium;
+    background-color: #919077;
+    color: white;
+    border-radius: 5px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+/*displays question and score counter inline*/
+li {
+    display: inline-block;
+    width: 40%;
+    margin-left: 10px;
+}
+
+/*hides bullet points*/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*hides radio list dots*/
+input {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/*general styling for possible answers*/
+label {
+    display: inline-block;
+    width: 350px;
+    font-size: larger;
+    padding: 25px 50px;
+    margin: 25px;
+    color: white;
+    cursor: pointer;
+    background-color: #919077;
+    border: solid #919077;
+    border-radius: 10px;
+}
+
+/*styles selected answers*/
+input:checked + label {
+    color: black;
+    background-color: #ededb2;
+    border: solid black;
+}
+
+/*styling for the image displayed on the title page*/
+.titleImage {
+    width: 50%;
+    opacity: 0.8;
+}
