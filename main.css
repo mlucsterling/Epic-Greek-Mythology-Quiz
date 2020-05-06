@@ -34,9 +34,13 @@ div {
     border-width: 4px;
     border-color: #919077;
     width: 80%;
-    /*height: 625px;*/
     padding: 50px 15px 50px 15px;
     margin: auto;
+}
+
+/*generates automatic height for all containers*/
+.main-container, .question-score-container, .quiz-container, .finalResults-container, .results-container {
+    height: auto;
 }
 
 /*styles quiz description*/
@@ -45,8 +49,10 @@ div {
     border-style: solid;
     border-width: 4px;
     border-color: #919077;
-    padding: 15px;
-    margin: 40px;
+    padding: 5px;
+    margin: auto;
+    width: auto;
+    max-width: 300px;
 }
 
 /*removes borders from all containers except the main container*/
@@ -57,7 +63,7 @@ form, fieldset, .title-container, .question-score-container, .quiz-container, .r
 /*makes all containers whitesmoke except main container and question/score counter container */
 form, .title-container, .quiz-container, .results-container {
     background-color: whitesmoke;
-    padding: 15px;
+    padding: auto;
 }
 
 /*styles the final score display*/
@@ -134,11 +140,15 @@ input {
 
 /*general styling for possible answers*/
 label {
-    display: inline-block;
-    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
     font-size: larger;
-    padding: 25px 50px;
-    margin: 25px;
+    text-align: center;
+    padding: 5px;
+    margin: auto;
     color: white;
     cursor: pointer;
     background-color: #919077;
