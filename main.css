@@ -97,6 +97,11 @@ img {
     border-style: solid;
     border-width: 4px;
     border-color: #919077;
+    width: auto;
+}
+
+.wrongAnswerImage {
+    
 }
 
 /*necessary height limit on the image displayed for a correct answer*/
