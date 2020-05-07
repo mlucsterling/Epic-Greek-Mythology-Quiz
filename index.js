@@ -9,9 +9,11 @@ let quizLength = myQUIZ.length
 //this function generates the title screen
 function buildTitle() {
     const titlePage = `
-    <img class="titleImage" src="QuizImages/titlePage.jpg">
+    <img class="titleImage" src="QuizImages/titlePage.jpg" alt="an epic mural of the Greek pantheon">
+    <header>
     <h1>Epic Greek Myth Quiz</h1>
     <p class="quizDescription">Test your knowledge of the Greek gods, quest for a perfect score!</p>
+    </header>
     <button id="startQuiz">Begin Quest</button>
     `
     $(".title-container").append(titlePage);
@@ -65,7 +67,7 @@ function createAnswers() {
 function correctAnswerFunction() {
   let correctAnswerHTML = `<h2>Correct!</h2>
     <p>The goddess of knowledge smiles upon you</p>
-    <img class="css-rightAnswer" src="QuizImages/rightAnswer.jpg">
+    <img class="css-rightAnswer" src="QuizImages/rightAnswer.jpg" alt="a triumphant hero holding the head of a terrifying monster">
     <br>
     <button type="button" class="nextQuestionButton" name="nextQuestion">Next Question</button>`
   $(".results-container").append(correctAnswerHTML);
@@ -77,7 +79,7 @@ function correctAnswerFunction() {
 function wrongAnswerFunction() {
   let wrongAnswerHTML = `<h2>Incorrect!</h2>
       <p>Fear not: true legends always press on</p>
-      <img src="QuizImages/wrongAnswer.jpg">
+      <img src="QuizImages/wrongAnswer.jpg" class="wrongAnswerImage" alt="an injured hero">
       <br>
       <button type="button" class="nextQuestionButton" name="nextQuestion">Next Question</button>`
   $(".results-container").append(wrongAnswerHTML);
@@ -113,7 +115,7 @@ function finishQuiz() {
   <h2>The Spoils of Your Quest:</h2>
   <h1 class="finalScore">${currentScore}/10 Points</h1>
   <p>The gods are pleased by your quest.</p>
-  <p>You may undertake these trials again, if you wish.</p>
+  <p>You may undertake these trials again, if you wish...</p>
   <button type="button" class="resetQuizButton" name="resetQuiz">Retry Quest</button>
   </div>`);
 };
