@@ -40,9 +40,7 @@ function createQuestion() {
         <form id="js-questions" class="question-form">
       
             <fieldset>
-                <div class="question">
-                    <legend>${questionObject.question}</legend>
-                </div>
+                <legend>${questionObject.question}</legend>
 
                 <div class="options"></div>
     
