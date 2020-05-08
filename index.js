@@ -26,17 +26,17 @@ function emptyQuestionAndScore() {
 
 //keeps track of the score and question Number
 function handleQuestionAndScore() {
-    const QuesScoreHTML = `<ul>
-    <li>Question: <span class="js-questionNum">${currentQuestionNum + 1}/${myQUIZ.length}</li>
-    <li>Score: <span class="js-score">${currentScore}</span></li>
-    </ul>`
+    const QuesScoreHTML = `<section><ul>
+    <li><h5>Question: <span class="js-questionNum">${currentQuestionNum + 1}/${myQUIZ.length}</h5></li>
+    <li><h5>Score: <span class="js-score">${currentScore}</span></h5></li>
+    </ul></section>`
     emptyQuestionAndScore();
     $(QuesScoreHTML).appendTo(".question-score-container");
 };
 
 //displays a question
 function createQuestion() {
-    const questionHTML = `<div>
+    const questionHTML = `<section>
         <form id="js-questions" class="question-form">
       
             <fieldset>
@@ -50,7 +50,7 @@ function createQuestion() {
              </fieldset>
 
          </form>
-     </div>`;
+     </section>`;
     $(questionHTML).appendTo(".quiz-container");
     createAnswers();
 };
@@ -67,7 +67,7 @@ function createAnswers() {
 function correctAnswerFunction() {
   let correctAnswerHTML = `<h2>Correct!</h2>
     <p>The goddess of knowledge smiles upon you</p>
-    <img class="css-rightAnswer" src="QuizImages/rightAnswer.jpg" alt="a triumphant hero holding the head of a terrifying monster">
+    <img class="css-rightAnswer" src="QuizImages/rightAnswer.jpg" alt="a triumphant hero holding the head of a monster">
     <br>
     <button type="button" class="nextQuestionButton" name="nextQuestion">Next Question</button>`
   $(".results-container").append(correctAnswerHTML);
@@ -111,18 +111,18 @@ function clickSubmitAnswer() {
 //finishes the quiz after the final question
 function finishQuiz() {
   $('.question-score-container').empty();
-  $('.results-container').append(`<div class="finalResults-container">
-  <h2>The Spoils of Your Quest:</h2>
+  $('.results-container').append(`<section class="finalResults-container">
+  <h2>The Results of Your Quest:</h2>
   <h1 class="finalScore">${currentScore}/10 Points</h1>
   <p>The gods are pleased by your quest.</p>
   <p>You may undertake these trials again, if you wish...</p>
   <button type="button" class="resetQuizButton" name="resetQuiz">Retry Quest</button>
-  </div>`);
+  </section>`);
 };
 
 //handles everything that happens when a user clicks on the "Next Question" button
 function clickNextQuestion() {
-  $('.main-container').on('click','.nextQuestionButton', function (event) {
+  $('.results-container').on('click','.nextQuestionButton', function (event) {
     currentQuestionNum++;
     questionObject = myQUIZ[currentQuestionNum];
     $('.results-container').empty()
@@ -150,6 +150,7 @@ function resetQuiz() {
 //generates quiz HTML and displays the first question
 function clickBeginQuiz() {
     $("#startQuiz").on('click', function (event) {
+    console.log('beginQuiz activated');
     $(".title-container").empty();
     handleQuestionAndScore();
     createQuestion();
@@ -158,12 +159,11 @@ function clickBeginQuiz() {
 };
 
 function handleQuiz() {
-    buildTitle();
-    emptyQuestionAndScore();
-    clickBeginQuiz();
-    clickSubmitAnswer();
-    clickNextQuestion();
-    resetQuiz();
+  buildTitle();  
+  clickBeginQuiz();
+  clickSubmitAnswer();
+  clickNextQuestion();
+  resetQuiz();
 };
 
 $(handleQuiz);

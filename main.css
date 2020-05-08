@@ -82,11 +82,6 @@ form, .title-container, .quiz-container, .results-container {
     color: white;
 }
 
-/*gives breathing room to the question and score counters*/
-.question-score-container {
-    padding-bottom: 10px;
-}
-
 /* gives some breathing room to the current question and the possible answers*/
 .question, .options, h2 {
     padding-top: 20px;
@@ -100,6 +95,14 @@ img {
     width: auto;
     max-width: 60%;
 }
+
+/*gives some space to the title image*/
+.titleImage {
+    width: 50%;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
 
 /*necessary height limit on the image displayed for a correct answer*/
 .css-rightAnswer {
@@ -163,10 +166,4 @@ input:checked + label {
     color: black;
     background-color: #ededb2;
     border: solid black;
-}
-
-/*styling for the image displayed on the title page*/
-.titleImage {
-    width: 50%;
-    opacity: 0.8;
 }
