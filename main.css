@@ -8,8 +8,8 @@ font-family: 'Cinzel', serif;*/
 /*background image and general styling information*/
 html {
     background-image: url("QuizImages/backgroundImage.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat;
+    background-size: cover; */
     font-family: 'Cinzel', serif;
     font-weight: bold;
     letter-spacing: 1px;
@@ -83,7 +83,7 @@ form, .title-container, .quiz-container, .results-container {
 }
 
 /* gives some breathing room to the current question and the possible answers*/
-.question, .options, h2 {
+h2, legend {
     padding-top: 20px;
 }
 
